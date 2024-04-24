@@ -1,0 +1,26 @@
+# دالة للحصول على أوقات الذكر للصباح والمساء من المصدر المحدد
+def get_reminder_times():
+    reminder_times = {
+        'Morning': "سبحان الله وبحمده، سبحان الله العظيم", # ذكر الصباح
+        'Evening': "أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه" # ذكر المساء
+    }
+    return reminder_times
+
+# دالة لعرض أوقات الذكر
+def display_reminder_times(reminder_times):
+    print("Reminder Times:")
+    for time, reminder in reminder_times.items():
+        print(f"{time}: {reminder}")
+
+# الدالة الرئيسية
+def main():
+    # الحصول على أوقات الذكر من المصدر المحدد
+    reminder_times = get_reminder_times()
+    
+    # عرض أوقات الذكر مع ذكر المصدر
+    print("Reminder times from: https://www.almrsal.com/wp-content/uploads/2023/12/%D8%A7%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD.pdf")
+    display_reminder_times(reminder_times)
+    print("Reminder times from: https://www.almrsal.com/post/570659")
+
+if __name__ == "__main__":
+    main()
